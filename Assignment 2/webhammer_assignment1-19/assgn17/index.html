@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function openGoogle() {
+
+            openTab = window.open("http://www.google.com");
+
+        }
+        function closegoogle(){
+
+            openTab.close();
+
+        }
+    </script>
+
+    <form onsubmit="return false">
+        <input type="image" src="http://static.libsyn.com/p/assets/5/b/f/0/5bf0dd70c2b87bb6/AoG.png" style="height: 30rem;" onclick="openGoogle()">
+        <input type="submit" value="Close" onclick="closegoogle()" style="position: absolute;top: 28rem ;font-size: 2rem;left: 2rem;">
+    </form>
+
+
+
+</body>
+
+</html>

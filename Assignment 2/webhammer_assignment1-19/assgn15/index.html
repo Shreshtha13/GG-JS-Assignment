@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Slide show (6 images)</title>
+    <script>
+        
+        var counter = 1
+
+        function goBack() {
+
+            counter=counter-2;
+            console.log(counter);
+            changeIt();
+
+        }
+
+        function changeIt() {
+        
+            if (counter == 1) {
+                document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/yahoo.gif"
+                counter = 2
+                console.log(counter);
+            }
+            else if (counter == 2) {
+                document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/lycos.gif"
+                counter = 3
+                console.log(counter);
+
+            }
+            else if (counter == 3) {
+                document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/infoseek.gif"
+                counter = 4
+                console.log(counter);
+
+            }
+            else if (counter == 4) {
+                document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/webcrawler.gif"
+                counter = 5
+                console.log(counter);
+
+            }
+            else if (counter == 5) {
+                document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/metacrawler.gif"
+                counter = 6
+                console.log(counter);
+
+            }
+            else {
+                document.searchImage.src = "http://www.webhammer.com/javascript/examples/slide_show/altavista.gif"
+                counter = 1
+                console.log(counter);
+
+            }
+
+
+            if(counter===1)
+            {
+                document.getElementById("back").style.visibility = "hidden";
+            }
+            else if(counter===6)
+            {
+                document.getElementById("forward").style.visibility = "hidden"
+            }
+            else{
+                document.getElementById("back").style.visibility = "visible";
+                document.getElementById("forward").style.visibility = "visible";
+
+            }
+
+
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <br><br><br>
+
+
+
+    <img src="http://www.webhammer.com/javascript/examples/slide_show/altavista.gif" name="searchImage">
+    <p>
+        
+    <form onsubmit="return false"> 
+      
+        
+        <input id="forward" type="image" src="https://img.icons8.com/ios/452/circled-right-2.png" style="height: 3rem;"  onClick="changeIt()">
+        <input id="back" type="image" src="https://image.flaticon.com/icons/png/512/93/93634.png" style="height: 3rem;"  onClick="goBack()">
+    </form>
+
+    
+
+</body>
+
+</html>

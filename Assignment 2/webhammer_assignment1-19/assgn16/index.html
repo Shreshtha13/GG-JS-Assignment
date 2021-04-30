@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Marbles | JavaScript</title>
+    <meta name="keywords"
+        content="javascript resources examples program code samples information introduction beginner newbie novice learn help exercise assignment">
+    <meta name="description" content="Assignment for beginners learning JavaScript.">
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/styles/javascript.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="/scripts/javascript.js"></script>
+</head>
+
+<body>
+
+    <div id="outerWrapper">
+        <div id="innerWrapper">
+
+            <script>
+                writeHeader()
+            </script>
+
+            <div id="content">
+
+                <h2>JavaScript Materials</h2>
+
+                <h1>Marbles</h1>
+
+                <table>
+
+
+                    <tr valign="top" align="center">
+                        <td>
+                            <img id="i1" src="marble1.jpg">
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <img id="i2" src="marble1.jpg">
+                        </td>
+                    </tr>
+
+                    <tr valign="top" align="center">
+                        <td>
+                            &nbsp;<br><br>
+                        </td>
+                    </tr>
+
+
+                    <tr valign="top" align="center">
+                        <td>
+                            <img id="i6" src="marble1.jpg">
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <img id="i0" src="marble1.jpg">
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <img id="i3" src="marble1.jpg">
+                        </td>
+                    </tr>
+
+                    <tr valign="top" align="center">
+                        <td>
+                            &nbsp;<br><br>
+                        </td>
+                    </tr>
+
+
+
+                    <tr valign="top" align="center">
+                        <td>
+                            <img id="i5" src="marble1.jpg">
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <img id="i6" src="marble1.jpg">
+                        </td>
+                    </tr>
+
+
+                </table>
+                <img id="orange" src="marble2.jpg" alt=""
+                    style="position: absolute; top: 140px; left: 80px; height: 3.2rem;">
+
+            </div>
+
+            <script>
+                var x = new Array();
+                x[0] = 80;
+                x[1] = 200;
+                x[2] = 260;
+                x[3] = 200;
+                x[4] = 80;
+                x[5] = 260;
+                var y = new Array();
+                y[0] = 140;
+                y[1] = 140;
+                y[2] = 258;
+                y[3] = 377;
+                y[4] = 377;
+                y[5] = 258;
+                animate();
+                function animate() {
+                    function rotate() {
+                        var i = 0;
+
+                        for (i = 0; i <= 5; i++) {
+
+
+                            startAnimation();
+                            document.getElementById("orange").style.top = y[i] + "px";
+                            document.getElementById("orange").style.left = x[i] + "px";
+                            clearTimeout(start);
+                            if (i === 6) {
+                                i = 0;
+                            }
+
+                        }
+
+
+                    }
+                   
+                    function startAnimation() {
+                        setTimeout(rotate(), 1000);
+
+                    }
+
+
+                    var start = startAnimation;
+
+
+
+
+
+                }
+
+            </script>
+
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+
+
+    </script>
+</body>
+
+</html>
