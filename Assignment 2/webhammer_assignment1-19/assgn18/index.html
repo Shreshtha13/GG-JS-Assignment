@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       var topLeft;
+
+       var topRight;
+
+       var bottomLeft;
+
+       var bottomRight;
+
+       var center;
+       
+       window.onbeforeunload = function() {
+           closeAll();
+       };
+
+
+        function openPopUps() {
+
+            // let paramsTopLeft = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
+
+            var paramsTopLeft = `width=300,height=300,left=0,top=80`;
+
+            var paramstopRight = `width=300,height=300,left=50,top=80`;
+
+            var paramsbottomLeft = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
+
+            var paramsbottomRight = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
+
+            var paramscenter = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
+
+
+
+            topLeft = window.open("https://www.google.com", window.name, paramsTopLeft)
+
+
+
+            topRight = window.open("https://www.facebook.com", window.name, paramstopRight)
+
+            bottomLeft = window.open("https://www.yahoo.com", window.name, paramsbottomLeft)
+            bottomRight = window.open("https://www.google.com", window.name, paramsbottomRight)
+            center = window.open("https://www.instagram.com", window.name, paramscenter)
+
+
+
+
+
+
+
+
+        }
+        function closeAll() {
+
+            // window.close();
+
+
+
+            topLeft.close();
+
+            topRight.close();
+
+            bottomLeft.close();
+
+            bottomRight.close();
+
+            center.close();
+
+
+
+        }
+
+
+
+    </script>
+
+
+    <form onsubmit="return false">
+        <input type="image"
+            src="https://i1.wp.com/www.alphr.com/wp-content/uploads/2018/03/we_can_improve_the_button_researchers_declare_2-scaled.jpg?fit=2560%2C1442&ssl=1"
+            style="height: 10rem;" onclick="openPopUps()">
+        <input type="submit" value="Close Window" onclick="closeAll()">
+
+    </form>
+
+
+
+</body>
+
+</html>
