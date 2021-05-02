@@ -1,0 +1,48 @@
+:root {
+    --spacing: 10px;
+    --blur: 0px;
+    --base: #00adb5;
+}
+
+h2 {
+    margin: 7rem auto 0;
+    display: block;
+    color: #eeeeee;
+    width: max-content;
+    font-family:'Open Sans', sans-serif;;
+}
+
+span {
+    color: var(--base);
+}
+
+body {
+    background-color: #393e46;
+}
+
+label {
+    color: #aad8d3;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+.controls input[type="range"]{
+height: 2px;
+}
+
+
+
+.controls {
+    width: max-content;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+img {
+    display: block;
+    margin: 2rem auto;
+    width: 800px;
+    position: relative;
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}

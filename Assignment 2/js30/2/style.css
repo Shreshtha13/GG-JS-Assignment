@@ -1,0 +1,47 @@
+body{
+    background-image: url(images/background.jpg);
+}
+
+.clock-face{
+    border: 0.5rem white solid;
+    height: 20rem;
+    width: 20rem;
+    margin: auto;
+    margin-top: 8rem;
+    border-radius: 18rem;
+}
+.clock-face .center{
+    height: 1rem;
+    background-color: white;
+    width: 1rem;
+    
+    position: absolute;
+   margin-left: 9.4rem;
+   margin-top: 9.7rem;
+    border: white 1px solid;
+    border-radius: 1rem;
+}
+
+.clock-face .hand{
+    height: 2px;
+   background-color: white;
+    position: relative;
+    top: 10rem;
+    left: 10rem;
+    width: 45%;
+    transform-origin: 0%;
+    transform:rotate(270deg) ;
+    transition: all 0.1s;
+    transition-timing-function:cubic-bezier(0, 1.64, 0.88, 1.43);
+
+    
+
+}
+.clock-face .min{
+    /* transform: rotate(deg); */
+    width: 44%;
+}
+.clock-face .hour{
+    width: 35%;
+}
+
