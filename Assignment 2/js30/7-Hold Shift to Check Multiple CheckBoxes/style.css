@@ -1,0 +1,56 @@
+html{
+    background-color: #ff8303;
+}
+
+.item {
+    display: flex;
+    background-color: #f0e3ca;
+    padding-left: 10px;
+}
+
+.checkList {
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+    width: fit-content;
+    margin: 5rem auto 5rem;
+    perspective: 1px;
+    overflow: hidden;
+}
+
+
+.checkList input[type=checkbox]:checked+p {
+    color: rgb(48, 47, 47);
+    text-decoration: line-through;
+    background: #dbc69f;
+}
+
+
+
+
+
+
+input {
+    position: relative;
+    top: 1.2rem;
+    margin-right: 15px;
+}
+
+p {
+    margin: 0;
+   padding: 20px;
+    transition: background 0.2s;
+    /* transition: text-decoration 0.1s; */
+    flex: 1;
+    font-family: 'helvetica neue';
+    width: max-content;
+    font-weight: 200;
+    border-left: solid 1px #eed5a5;
+    
+}
+
+.checkList .separator {
+    height: 1px;
+    background-color: #eed5a5;
+    width: 15rem;
+    
+}
