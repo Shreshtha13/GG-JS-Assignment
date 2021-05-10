@@ -10,35 +10,38 @@
 
 <body>
     <script>
-       var topLeft;
+        var topLeft;
 
-       var topRight;
+        var topRight;
 
-       var bottomLeft;
+        var bottomLeft;
 
-       var bottomRight;
+        var bottomRight;
 
-       var center;
-       
-       window.onbeforeunload = function() {
-           closeAll();
-       };
+        var center;
+
+        window.onbeforeunload = function () {
+            closeAll();
+        };
 
 
         function openPopUps() {
+            var leftParam = Math.random() * 1000;
+            var topParam = Math.random ()* 300;
 
             // let paramsTopLeft = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
 
-            var paramsTopLeft = `width=300,height=300,left=0,top=80`;
+            var paramsTopLeft = `width=300,height=300,left=0,top=0`;
 
-            var paramstopRight = `width=300,height=300,left=50,top=80`;
+            var paramstopRight = `width=300,height=300,left=0,top=300`;
 
-            var paramsbottomLeft = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
+            var paramsbottomLeft = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=1000,top=300`;
 
-            var paramsbottomRight = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
+            var paramsbottomRight = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=1000,top=0`;
 
-            var paramscenter = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=0,top=80`;
+            var paramscenter = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=500,top=150`;
 
+            var paramsRandom = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=300,height=300,left=${leftParam},top=${topParam}`;
 
 
             topLeft = window.open("https://www.google.com", window.name, paramsTopLeft)
@@ -48,8 +51,9 @@
             topRight = window.open("https://www.facebook.com", window.name, paramstopRight)
 
             bottomLeft = window.open("https://www.yahoo.com", window.name, paramsbottomLeft)
-            bottomRight = window.open("https://www.google.com", window.name, paramsbottomRight)
+            bottomRight = window.open("https://www.twitter.com", window.name, paramsbottomRight)
             center = window.open("https://www.instagram.com", window.name, paramscenter)
+            randomWindow = window.open("https://in.pinterest.com/", window.name, paramsRandom)
 
 
 
@@ -64,6 +68,7 @@
             // window.close();
 
 
+            randomWindow.close();
 
             topLeft.close();
 
@@ -74,6 +79,7 @@
             bottomRight.close();
 
             center.close();
+
 
 
 
